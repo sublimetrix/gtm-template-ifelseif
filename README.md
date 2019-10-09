@@ -1,0 +1,23 @@
+# If ... Else If ...
+
+## Description
+An advanced lookup table with multiple tests and returns.
+Easiest way to create custom conditions without knowledges in Javascript.
+Can help your clients to be autonomous in Google Tag Manager.
+
+## Example
+
+### Page template
+| If | Matches | Rule | Return |
+| ---- | ---- | ---- | ---- |
+|{{Page Path}}|equals|/|home page|
+|{{Body Classes}}|starts with|product-cat-|products list page|
+|{{Body Classes}}|contains|product-id-|product page|
+|{{Body ID}}|contains|product-|product page|
+|{{DL_formName}}|matches RegExp|(testdrive\|quotation)|form lead page|
+
+### User Language
+| If | Matches | Rule | Return |
+| ---- | ---- | ---- | ---- |
+|{{HTML Lang}}|matches RegExp|[a-z]{2}|{{HTML Lang}}|
+|{{Browser Lang}}|does not equals|undefined|{{Browser Lang}}|
