@@ -20,4 +20,4 @@ Can help your clients to be autonomous in Google Tag Manager.
 | If | Matches | Rule | Return |
 | ---- | ---- | ---- | ---- |
 |{{HTML Lang}}|matches RegExp|[a-z]{2}|{{HTML Lang}}|
-|{{Browser Lang}}|does not equals|undefined|{{Browser Lang}}|
+|{{HTML Lang}}|contains|-|{{HTML Lang - Part 2}}|
