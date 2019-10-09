@@ -15,9 +15,3 @@ Can help your clients to be autonomous in Google Tag Manager.
 |{{Body Classes}}|contains|product-id-|product page|
 |{{Body ID}}|contains|product-|product page|
 |{{DL_formName}}|matches RegExp|(testdrive\|quotation)|form lead page|
-
-### User Language
-| If | Matches | Rule | Return |
-| ---- | ---- | ---- | ---- |
-|{{HTML Lang}}|matches RegExp|[a-z]{2}|{{HTML Lang}}|
-|{{HTML Lang}}|contains|-|{{HTML Lang - Part 2}}|
