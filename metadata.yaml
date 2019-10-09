@@ -1,9 +1,11 @@
 homepage: "http://sublimetrix.com"
 versions:
   # Last version
+  - sha: bf8790b246e57b8b471bda33d62c8d98b56c67d4
+  changesNotes: Change README.md file
+
+  # Older versions
   - sha: f436d3a22416459c9753b0a6fd2d5d790bf7dac7
   changesNotes: Change LICENSE file
-
-  # Older version
   - sha: 251385c424b3ed1b22b08e8c4c7899d2767169fa
     changeNotes: Initial Version
