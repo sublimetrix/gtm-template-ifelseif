@@ -2,7 +2,6 @@
 
 {
   "displayName": "If ... Else If ...",
-  "categories": ["UTILITY", "TAG_MANAGEMENT"],
   "description": "An advanced lookup table with multiple tests and returns (by Sublimetrix)",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
