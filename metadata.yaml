@@ -1,0 +1,5 @@
+homepage: "http://sublimetrix.com"
+documentation: "https://github.com/sublimetrix/gtm-template-ifelseif"
+versions:
+  - sha: 172ebbdeaab71b8c54c098ecda19c114ee4575c6
+  changeNotes: First release
