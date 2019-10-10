@@ -18,9 +18,7 @@ ___INFO___
   "containerContexts": [
     "WEB"
   ],
-  "brand": {
-    "displayName": "Custom Template"
-  }
+  "brand": {}
 }
 
 
@@ -160,7 +158,7 @@ ___WEB_PERMISSIONS___
           "key": "environments",
           "value": {
             "type": 1,
-            "string": "all"
+            "string": "debug"
           }
         }
       ]
