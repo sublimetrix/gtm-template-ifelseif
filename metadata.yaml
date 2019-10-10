@@ -12,4 +12,4 @@ versions:
   - sha: f436d3a22416459c9753b0a6fd2d5d790bf7dac7
   changesNotes: Change LICENSE file
   - sha: 251385c424b3ed1b22b08e8c4c7899d2767169fa
-    changeNotes: Initial Version
+   changeNotes: Initial Version
