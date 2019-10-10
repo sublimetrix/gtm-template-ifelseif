@@ -8,7 +8,7 @@ Can help your clients to be autonomous in Google Tag Manager.
 ## Example
 
 ### Page template
-| If | Matches | Rule | Return |
+| If | Matches | This | Return |
 | ---- | ---- | ---- | ---- |
 |{{Page Path}}|equals|/|home page|
 |{{Body ID}}|starts with|product-cat-|products list page|
