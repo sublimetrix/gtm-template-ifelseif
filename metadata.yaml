@@ -1,10 +1,12 @@
 homepage: "http://sublimetrix.com"
 versions:
   # Last version
-  - sha: 761d782f45631df3c046fe2f34e6382875e900db
-  changesNotes: Remove Always Log in template + Change README.md file
+  - sha: b2faba4b206ce571b0da49f4ed963f3dd83bb8a3
+  changesNotes: Varsion 1.1.0 - Add default value
 
   # Older versions
+   sha: 761d782f45631df3c046fe2f34e6382875e900db
+  changesNotes: Remove Always Log in template + Change README.md file
   - sha: 1af8a580be273d3883e2d7b2160ea50cc564f0d1
   changesNotes: Change README.md file
   - sha: bf8790b246e57b8b471bda33d62c8d98b56c67d4
