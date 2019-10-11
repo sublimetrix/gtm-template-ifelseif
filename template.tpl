@@ -26,6 +26,11 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
+    "type": "LABEL",
+    "name": "documentation",
+    "displayName": "Documentation : https://github.com/sublimetrix/gtm-template-ifelseif"
+  },
+  {
     "alwaysInSummary": false,
     "displayName": "Rule table",
     "name": "rule_table",
@@ -140,6 +145,12 @@ ___TEMPLATE_PARAMETERS___
     ],
     "type": "SIMPLE_TABLE",
     "newRowButtonText": "Else If"
+  },
+  {
+    "type": "TEXT",
+    "name": "default_value",
+    "displayName": "Else (default value, leave empty to return undefined)",
+    "simpleValueType": true
   }
 ]
 
@@ -175,8 +186,9 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 // Enter your template code here.
 const log = require('logToConsole');
-
 log('data =', data);
+const defaultValue = data.default_value;
+//log('default =', defaultValue);
 
 const RULE = {
   equals: (entry,comp) => {
@@ -242,13 +254,15 @@ const RULE = {
 };
 
 const rules = data.rule_table;
-for (let i=0; i<rules.length; i++) {
-  const rule = rules[i];
-  if ( RULE[rule.method](rule.entry,rule.comparator) ) return rule.returnValue;
+if ('undefined' != typeof rules) {
+  for (let i=0; i<rules.length; i++) {
+    const rule = rules[i];
+    if ( RULE[rule.method](rule.entry,rule.comparator) ) return rule.returnValue;
+  }
 }
 
 // Variables must return a value.
-return undefined;
+return defaultValue;
 
 
 ___NOTES___
