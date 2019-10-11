@@ -18,7 +18,9 @@ ___INFO___
   "containerContexts": [
     "WEB"
   ],
-  "brand": {}
+  "brand": {
+    "displayName": "Custom Template"
+  }
 }
 
 
@@ -272,3 +274,7 @@ Version: 1.0.0
 Author: Sublimetrix
 Date: 2019.10.09
 /*******************/
+
+Change Log:
+1.0.0: Initial Version
+1.1.0: Default value
