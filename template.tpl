@@ -18,9 +18,7 @@ ___INFO___
   "containerContexts": [
     "WEB"
   ],
-  "brand": {
-    "displayName": "Custom Template"
-  }
+  "brand": {}
 }
 
 
@@ -28,9 +26,9 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "type": "LABEL",
+    "displayName": "Documentation : https://github.com/sublimetrix/gtm-template-ifelseif",
     "name": "documentation",
-    "displayName": "Documentation : https://github.com/sublimetrix/gtm-template-ifelseif"
+    "type": "LABEL"
   },
   {
     "alwaysInSummary": false,
@@ -149,48 +147,19 @@ ___TEMPLATE_PARAMETERS___
     "newRowButtonText": "Else If"
   },
   {
-    "type": "TEXT",
-    "name": "default_value",
     "displayName": "Else (default value, leave empty to return undefined)",
-    "simpleValueType": true
-  }
-]
-
-
-___WEB_PERMISSIONS___
-
-[
-  {
-    "instance": {
-      "key": {
-        "publicId": "logging",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "environments",
-          "value": {
-            "type": 1,
-            "string": "debug"
-          }
-        }
-      ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
-    "isRequired": true
+    "simpleValueType": true,
+    "name": "default_value",
+    "type": "TEXT"
   }
 ]
 
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-// Enter your template code here.
-const log = require('logToConsole');
-log('data =', data);
+//const log = require('logToConsole');
+//log('data =', data);
 const defaultValue = data.default_value;
-//log('default =', defaultValue);
 
 const RULE = {
   equals: (entry,comp) => {
@@ -259,11 +228,19 @@ const rules = data.rule_table;
 if ('undefined' != typeof rules) {
   for (let i=0; i<rules.length; i++) {
     const rule = rules[i];
-    if ( RULE[rule.method](rule.entry,rule.comparator) ) return rule.returnValue;
+    if ( RULE[rule.method](resolve(rule.entry),resolve(rule.comparator)) ) return rule.returnValue;
   }
 }
 
-// Variables must return a value.
+function resolve(x)
+{
+  switch (typeof x) {
+    case 'undefined': x = typeof x; break;
+    case 'boolean': x = x ? 'true' : 'false'; break;
+  }
+  return x;
+}
+
 return defaultValue;
 
 
@@ -278,3 +255,4 @@ Date: 2019.10.09
 Change Log:
 1.0.0: Initial Version
 1.1.0: Default value
+1.1.1: Fix boolean issue + remove log requirement
