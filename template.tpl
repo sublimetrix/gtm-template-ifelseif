@@ -9,7 +9,7 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "If ... Else If ...",
+  "displayName": "If Else If - Advanced Lookup Table",
   "description": "An advanced lookup table with multiple tests and returns (by Sublimetrix)",
   "securityGroups": [],
   "id": "cvt_temp_public_id",
@@ -18,7 +18,9 @@ ___INFO___
   "containerContexts": [
     "WEB"
   ],
-  "brand": {}
+  "brand": {
+    "displayName": "Custom Template"
+  }
 }
 
 
@@ -169,10 +171,10 @@ const RULE = {
   	return (0 < entry.indexOf(comp));
   },
   startsWith: (entry,comp) => {
-  	return entry.match('^'+comp);
+  	return entry.match('^('+comp+')');
   },
   endsWith: (entry,comp) => {
-  	return entry.match(comp+'$');
+  	return entry.match('('+comp+')$');
   },
   /***
    *** not available
@@ -193,10 +195,10 @@ const RULE = {
   	return (0 > entry.indexOf(comp));
   },
   doesNotStartWith: (entry,comp) => {
-  	return !entry.match('^'+comp);
+  	return !entry.match('^('+comp+')');
   },
   doesNotEndWith: (entry,comp) => {
-  	return !entry.match(comp+'$');
+  	return !entry.match('('+comp+')$');
   },
   /***
    *** not available
@@ -256,3 +258,5 @@ Change Log:
 1.0.0: Initial Version
 1.1.0: Default value
 1.1.1: Fix boolean issue + remove log requirement
+1.1.2: Optimization
+1.2.0: Name change
