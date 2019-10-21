@@ -1,4 +1,4 @@
-# If ... Else If ...
+# If Else If - Advanced Lookup Table
 
 ## Description
 An advanced lookup table with multiple tests and returns.
