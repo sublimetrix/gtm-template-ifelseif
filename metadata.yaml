@@ -2,14 +2,14 @@ homepage: "http://sublimetrix.com"
 versions:
   # Last version
   - sha: ce398ea118784e511902c9ddbfe34eddf4a8f423
-  changesNotes: Name update
+    changesNotes: Name update
 
   # Older versions
   - sha: 571a32a6b8fcc61b1b89fbc7667037d8cfac3dce
-  changesNotes: Fix
+    changesNotes: Fix
   - sha: b2faba4b206ce571b0da49f4ed963f3dd83bb8a3
-  changesNotes: Version 1.1.0 - Add default value
+    changesNotes: Version 1.1.0 - Add default value
   - sha: 761d782f45631df3c046fe2f34e6382875e900db
-  changesNotes: Remove Always Log in template + Change README.md file
+    changesNotes: Remove Always Log in template + Change README.md file
   - sha: 251385c424b3ed1b22b08e8c4c7899d2767169fa
-   changeNotes: Initial Version
+    changeNotes: Initial Version
