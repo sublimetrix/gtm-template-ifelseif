@@ -17,10 +17,7 @@ ___INFO___
   "version": 1,
   "containerContexts": [
     "WEB"
-  ],
-  "brand": {
-    "displayName": "Custom Template"
-  }
+  ]
 }
 
 
@@ -168,7 +165,7 @@ const RULE = {
   	return entry == comp;
   },
   contains: (entry,comp) => {
-  	return (0 < entry.indexOf(comp));
+  	return (-1 < entry.indexOf(comp));
   },
   startsWith: (entry,comp) => {
   	return entry.match('^('+comp+')');
@@ -192,7 +189,7 @@ const RULE = {
   	return entry != comp;
   },
   doesNotContain: (entry,comp) => {
-  	return (0 > entry.indexOf(comp));
+  	return (-1 > entry.indexOf(comp));
   },
   doesNotStartWith: (entry,comp) => {
   	return !entry.match('^('+comp+')');
@@ -246,6 +243,11 @@ function resolve(x)
 return defaultValue;
 
 
+___TESTS___
+
+scenarios: []
+
+
 ___NOTES___
 
 /*** SUBLIMETRIX ***/
@@ -260,3 +262,6 @@ Change Log:
 1.1.1: Fix boolean issue + remove log requirement
 1.1.2: Optimization
 1.2.0: Name change
+1.2.1: Fix on "contains" & "does not contains" comparators
+
+
