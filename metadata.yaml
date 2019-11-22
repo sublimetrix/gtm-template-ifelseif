@@ -1,10 +1,13 @@
 homepage: "http://sublimetrix.com"
 versions:
   # Last version
-  - sha: ce398ea118784e511902c9ddbfe34eddf4a8f423
-    changesNotes: Name update
+  - sha: 1a2a5ad38afc4539d9adde44db786eac0cc70071
+    changesNotes: Fix on "contains" & "does not contains" comparators
+
 
   # Older versions
+  - sha: ce398ea118784e511902c9ddbfe34eddf4a8f423
+    changesNotes: Name update
   - sha: 571a32a6b8fcc61b1b89fbc7667037d8cfac3dce
     changesNotes: Fix
   - sha: b2faba4b206ce571b0da49f4ed963f3dd83bb8a3
