@@ -189,7 +189,7 @@ const RULE = {
   	return entry != comp;
   },
   doesNotContain: (entry,comp) => {
-  	return (-1 > entry.indexOf(comp));
+  	return (-1 >= entry.indexOf(comp));
   },
   doesNotStartWith: (entry,comp) => {
   	return !entry.match('^('+comp+')');
